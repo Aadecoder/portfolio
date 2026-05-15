@@ -78,4 +78,4 @@ export const contact = [
   { label: 'Instagram', value: 'aaditya_rajputr', href: 'https://instagram.com/aaditya_rajputr' },
 ]
 
-export const resumeLink = './Aditya_Rajput_Resume.pdf'
+export const resumeLink = './Aditya_Rajput_Resume-1.pdf'
