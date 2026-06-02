@@ -4,7 +4,7 @@ export const sections = ['about', 'projects', 'skills', 'experience', 'blog', 'r
 
 export const about = {
   name: 'Aditya Dinesh Rajput',
-  tagline: 'ECE Student | Embedded Systems | Web Development',
+  tagline: 'ECE Undergrad | Embedded Systems | Web Development',
   bio: [
     'Aspiring engineer with a passion for embedded systems, the web and computers in general.',
     'Driven by curiosity and hands-on problem solving to bridge hardware and software.',
@@ -48,8 +48,8 @@ export const projects = [
 ]
 
 export const skills = {
-  Languages: ['C', 'C++', 'Python', 'JavaScript'],
-  Technologies: ['Microcontroller Programming', 'Bare-metal Development', 'RTOS', 'React', 'Tailwind CSS', 'Machine Learning', 'Neural Networks'],
+  Languages: ['C', 'C++', 'Rust', 'Java', 'Python', 'JavaScript'],
+  Technologies: ['Microcontroller Programming', 'Bare-metal Development', 'Linux Kernel Development','RTOS', 'React', 'Tailwind CSS', 'Machine Learning', 'Neural Networks'],
   Tools: ['NeoVim', 'VS Code', 'Linux', 'Git', 'STM32CubeIDE', 'MongoDB', 'Figma'],
 }
 
