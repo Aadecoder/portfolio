@@ -1,6 +1,6 @@
 export const promptLabel = 'aditya@portfolio:~$'
 
-export const sections = ['about', 'projects', 'skills', 'experience', 'blog', 'resume', 'contact']
+export const sections = ['about', 'projects', 'skills', 'experience', 'resume', 'contact']
 
 export const about = {
   name: 'Aditya Dinesh Rajput',
@@ -76,6 +76,7 @@ export const contact = [
   { label: 'LinkedIn', value: 'aditya-rajput-70372930a', href: 'https://www.linkedin.com/in/aditya-rajput-70372930a' },
   { label: 'X (Twitter)', value: 'aadi_rajputr', href: 'https://x.com/aadi_rajputr' },
   { label: 'Instagram', value: 'aaditya_rajputr', href: 'https://instagram.com/aaditya_rajputr' },
+  { label: 'Blogs', value: 'aadecoder.github.io/blogs', href: 'https://aadecoder.github.io/blogs' },
 ]
 
 export const resumeLink = './Aditya_Rajput_Resume-1.pdf'

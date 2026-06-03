@@ -20,37 +20,74 @@ const SectionPanel = ({ active, onNavigate, onAction, tone, isDark }) => {
         )
       case 'projects':
         return (
-          <div className="space-y-3">
+          <div className="space-y-4">
             {projects.map((project) => (
-              <button
-                key={project.slug}
-                className={`${cardBase} block w-full text-left`}
-                onClick={() => onAction({ type: 'project', slug: project.slug })}
-              >
+              <div key={project.slug} className={`${cardBase} space-y-2`}>
                 <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                   <div className="text-sm font-semibold md:text-base">{project.title}</div>
                   <div className={`text-xs uppercase tracking-wide ${tone.accentSoft}`}>{project.field}</div>
                 </div>
-                <div className="text-xs text-slate-500">{project.stack.join(', ')}</div>
-              </button>
+                {project.description && (
+                  <p className={`text-xs md:text-sm ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+                    {project.description}
+                  </p>
+                )}
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className={`text-xs px-2 py-1 rounded-sm ${tone.border} ${isDark ? 'bg-slate-800/60 text-slate-300' : 'bg-slate-100 text-slate-700'}`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`text-xs px-3 py-1.5 transition font-medium ${tone.card} ${tone.border} ${tone.accent}`}
+                    >
+                      GitHub ↗
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`text-xs px-3 py-1.5 transition font-medium ${tone.card} ${tone.border} ${tone.accentSoft}`}
+                    >
+                      Demo ↗
+                    </a>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         )
       case 'skills':
         return (
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="space-y-4">
             {Object.entries(skills).map(([group, list]) => (
-              <button
-                key={group}
-                className={`${cardBase} text-left`}
-                onClick={() => onAction?.({ type: 'skill', group })}
-              >
-                <div className="flex items-center justify-between gap-2">
+              <div key={group} className={`${cardBase}`}>
+                <div className="flex items-center justify-between gap-2 mb-2">
                   <div className="text-sm font-semibold md:text-base capitalize">{group}</div>
                   <div className={`text-[10px] uppercase tracking-wide ${tone.accentSoft}`}>{list.length} items</div>
                 </div>
-                <div className="mt-1 text-xs text-slate-500">{list.slice(0, 3).join(', ')}{list.length > 3 ? ', …' : ''}</div>
-              </button>
+                <div className="flex flex-wrap gap-2">
+                  {list.map((item) => (
+                    <span
+                      key={item}
+                      className={`text-xs px-2 py-1 rounded-sm ${tone.border} ${isDark ? 'bg-slate-800/60 text-slate-300' : 'bg-slate-100 text-slate-700'}`}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         )
