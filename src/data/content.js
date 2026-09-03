@@ -14,12 +14,12 @@ export const about = {
 
 export const projects = [
   {
-    title: 'Self Balancing Bot (Simulation)',
-    slug: 'self-balancing-bot',
-    description: 'Built a CoppeliaSim simulation for a self-balancing robot with a tuned PID controller.',
-    stack: ['CoppeliaSim', 'Python', 'PID Control'],
-    field: 'Embedded / Control',
-    github: 'https://github.com/Aadecoder',
+    title: 'Real Time Operating System (RTOS)',
+    slug: 'rtos',
+    description: 'Implemented a Small RTOS from scratch in C.',
+    stack: ['C', 'RTOS', 'ARM Assembly', 'GDB'],
+    field: 'Embedded / RTOS',
+    github: 'https://github.com/Aadecoder/rtos-from-scratch',
   },
   {
     title: 'STM32F411 Device Drivers',
@@ -28,6 +28,14 @@ export const projects = [
     stack: ['Embedded C', 'STM32CubeIDE'],
     field: 'Embedded / Drivers',
     github: 'https://github.com/Aadecoder/STM32F411xx-Drivers',
+  },
+  {
+    title: 'Self Balancing Bot (Simulation)',
+    slug: 'self-balancing-bot',
+    description: 'Built a CoppeliaSim simulation for a self-balancing robot with a tuned PID controller.',
+    stack: ['CoppeliaSim', 'Python', 'PID Control'],
+    field: 'Embedded / Control',
+    github: 'https://github.com/Aadecoder',
   },
   {
     title: 'Chess Advisor',
@@ -48,7 +56,7 @@ export const projects = [
 ]
 
 export const skills = {
-  Languages: ['C', 'C++', 'Rust', 'Java', 'Python', 'JavaScript'],
+  Languages: ['C', 'C++', 'Rust', 'Lua', 'Java', 'Python', 'JavaScript'],
   Technologies: ['Microcontroller Programming', 'Bare-metal Development', 'Linux Kernel Development','RTOS', 'React', 'Tailwind CSS', 'Machine Learning', 'Neural Networks'],
   Tools: ['NeoVim', 'VS Code', 'Linux', 'Git', 'STM32CubeIDE', 'MongoDB', 'Figma'],
 }
@@ -79,4 +87,4 @@ export const contact = [
   { label: 'Blogs', value: 'aadecoder.github.io/blogs', href: 'https://aadecoder.github.io/blogs' },
 ]
 
-export const resumeLink = './Aditya_Rajput_Resume-1.pdf'
+export const resumeLink = './Aditya_Rajput_Resume-2.pdf'
